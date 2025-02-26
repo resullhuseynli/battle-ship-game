@@ -15,7 +15,7 @@ public class Main {
 
         fillTheOcean(ocean);
         deployTheShip(ocean);
-        System.out.println("All set. Get ready to rumble!");
+        showTitle();
         showTheOcean(ocean);
         int sum = 0;
 
@@ -25,6 +25,14 @@ public class Main {
 
         System.out.println("You sank the last ship. You won. Congratulations!");
 
+    }
+
+    private static void showTitle() {
+        System.out.println();
+        System.out.println();
+        System.out.println("**********************   Welcome to the Battleship game!   **********************");
+        System.out.println("**********************    All set. Get ready to rumble!    **********************");
+        System.out.println();
     }
 
     private static void fillTheOcean(char[][] ocean) {
