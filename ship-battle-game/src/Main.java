@@ -6,6 +6,25 @@ public class Main {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        start();
+    }
+
+    private static void start() {
+
+        char[][] ocean = new char[5][5];
+
+        fillTheOcean(ocean);
+        deployTheShip(ocean);
+        System.out.println("All set. Get ready to rumble!");
+        showTheOcean(ocean);
+        int sum = 0;
+
+        while (sum != 3) {
+            sum = attackTheShip(ocean, sum);
+        }
+
+        System.out.println("You sank the last ship. You won. Congratulations!");
+
     }
 
     private static void fillTheOcean(char[][] ocean) {
