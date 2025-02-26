@@ -16,6 +16,15 @@ public class Main {
 
     }
 
+    private static void deployTheShip(char[][] ocean) {
+
+        int x = (int) (Math.random() * 5);
+        int y = (int) (Math.random() * 5);
+
+        ocean[x][y] = '!';
+
+    }
+
     private static void showTheOcean(char[][] ocean) {
 
         System.out.println("0 | 1 | 2 | 3 | 4 | 5 |");
