@@ -42,6 +42,42 @@ public class Main {
 
         ocean[x][y] = '!';
 
+        int direction = (int) (Math.random() * 2);
+        if (direction == 0) {
+            makeHorizontally(x, y, ocean);
+        } else {
+            makeVertically(x, y, ocean);
+        }
+
+    }
+
+    private static void makeHorizontally(int x, int y, char[][] ocean) {
+
+        if (y < 4 && y > 0) {
+            ocean[x][y-1] = '!';
+            ocean[x][y+1] = '!';
+        } else if (y==0) {
+            ocean[x][y+1] = '!';
+            ocean[x][y+2] = '!';
+        } else {
+            ocean[x][y-1] = '!';
+            ocean[x][y-2] = '!';
+        }
+
+    }
+
+    private static void makeVertically(int x, int y, char[][] ocean) {
+
+        if (x < 4 && x > 0) {
+            ocean[x-1][y] = '!';
+            ocean[x+1][y] = '!';
+        } else if (x == 0) {
+            ocean[x+1][y] = '!';
+            ocean[x+2][y] = '!';
+        } else {
+            ocean[x-1][y] = '!';
+            ocean[x-2][y] = '!';
+        }
     }
 
     private static void showTheOcean(char[][] ocean) {
