@@ -90,9 +90,9 @@ public class Main {
 
     private static void showTheOcean(char[][] ocean) {
 
-        System.out.println("0 | 1 | 2 | 3 | 4 | 5 |");
+        System.out.println("\t\t\t\t\t\t\t 0 | 1 | 2 | 3 | 4 | 5 |");
         for (int i = 0; i < ocean.length; i++) {
-            System.out.print(i + 1 + " | ");
+            System.out.print("\t\t\t\t\t\t\t " + (i + 1) + " | ");
             for (int j = 0; j < ocean[i].length; j++) {
                 if (ocean[i][j] != '!') {
                     System.out.print(ocean[i][j] + " | ");
@@ -102,6 +102,7 @@ public class Main {
             }
             System.out.println();
         }
+        System.out.println();
     }
 
     private static int attackTheShip(char[][] ocean, int sum) {
