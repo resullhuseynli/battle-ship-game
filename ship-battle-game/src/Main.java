@@ -41,6 +41,31 @@ public class Main {
         }
     }
 
+    private static int attackTheShip(char[][] ocean, int sum) {
+
+        System.out.println("Enter the row of your attack:");
+        int x = isNumber() - 1;
+        System.out.println("Enter the column of your attack:");
+        int y = isNumber() - 1;
+
+        if (ocean[x][y] == '!') {
+            System.out.println("You sank a piece of ship!");
+            ocean[x][y] = 'x';
+            showTheOcean(ocean);
+            return ++sum;
+        } else if (ocean[x][y] == '*' || ocean[x][y] == 'x') {
+            System.out.println("You cannot attack the same place!");
+            showTheOcean(ocean);
+            return sum;
+
+        } else {
+            System.out.println("You missed!");
+            ocean[x][y] = '*';
+            showTheOcean(ocean);
+            return sum;
+        }
+    }
+
     private static int isNumber() {
 
         int number = 0;
