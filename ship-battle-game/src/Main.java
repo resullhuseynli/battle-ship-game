@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -5,6 +6,14 @@ public class Main {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+    }
+
+    private static void fillTheOcean(char[][] ocean) {
+
+        for (char[] chars : ocean) {
+            Arrays.fill(chars, '-');
+        }
+
     }
 
     private static void showTheOcean(char[][] ocean) {
